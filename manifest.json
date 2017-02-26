@@ -1,0 +1,25 @@
+﻿{
+	"manifest_version": 2,
+	"name": "AutoFormReader",
+	"version": "1.0.0.0",
+	"description": "Fill web form by css selector.",
+	"permissions": [
+		"*://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/*"
+			],
+			"css":[
+				"css/bootstrap.css",
+				"css/style.css"
+			],
+			"js": [
+				"lib/jquery-2.1.1.js",
+				"js/background.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
